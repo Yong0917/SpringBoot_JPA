@@ -23,6 +23,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.2'
     implementation 'junit:junit:4.13.1'//넣으면 개발할떄 많은 편의성을 도와줌
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
