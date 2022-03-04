@@ -51,4 +51,11 @@ public class MemberService {    //test 커맨드 쉬프트 t
     public Member findOne(Long memberId){
         return memberRepository.findOne(memberId);
     }
+
+    //api수정
+    @Transactional
+    public void update(Long id, String name) {
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+    }
 }
