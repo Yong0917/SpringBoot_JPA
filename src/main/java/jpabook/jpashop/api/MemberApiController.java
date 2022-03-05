@@ -22,7 +22,7 @@ public class MemberApiController {
         return memberService.findMembers();         //이렇게 해버리면 entity에서 필요없는 정보도 반환될 수 있음
     }
 
-    @GetMapping("/api/v1/members")
+    @GetMapping("/api/v2/members")
     public Result membersV2(){
         List<Member> findMembers = memberService.findMembers();
         List<MemberDto> collect = findMembers.stream().map(m -> new MemberDto(m.getName()))
@@ -49,7 +49,7 @@ public class MemberApiController {
         return new CreateMemberResponse(id);
     }
 
-    @PostMapping("api/v2/members")
+    @PostMapping("/api/v2/members")
     public CreateMemberResponse saveMemberV2(@RequestBody @Valid CreateMemberRequest request){  //별도의 dto를 만들어서 entity가 안겹치게 구조를 짬
         Member member = new Member();
         member.setName(request.getName());

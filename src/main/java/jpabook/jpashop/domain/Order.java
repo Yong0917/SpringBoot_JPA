@@ -55,7 +55,7 @@ public class Order {
     }
 
     //생성 메서드
-    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){ //생성 메서드에서 바로 만드는거임
+    public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){ //생성 메서드에서 바로 만드는거임 ...은 여러개 넘길 수 있음
         Order order = new Order();
         order.setMember(member);
         order.setDelivery(delivery);
